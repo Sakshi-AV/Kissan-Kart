@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kissan Kart — Fresh from the farm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">K</span>Kissan<span class="brand-accent">Kart</span></a>
+    <nav><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#why">Why us</a></nav>
+    <div class="header-actions"><button id="themeToggle" class="icon-btn">☼</button><button id="cartBtn" class="cart-btn">Basket <span id="cartCount">0</span></button></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> HARVESTED FOR TODAY</div>
+        <h1>Good food<br><em>starts here.</em></h1>
+        <p>Farm-fresh produce from growers you can know, delivered to your door with less distance and more care.</p>
+        <div class="hero-ctas"><a href="#shop" class="primary-btn">Explore the harvest <span>↘</span></a><div class="delivery-note">⚡ Same-day delivery<br><small>selected Bengaluru areas</small></div></div>
+      </div>
+      <div class="hero-orbit">
+        <div class="sun">☀</div>
+        <div class="orbit-card card-a">🌱<span>Direct from<br>local farms</span></div>
+        <div class="produce-bowl">🥬<span>🍅</span><b>🥕</b><i>🌿</i></div>
+        <div class="orbit-card card-b">✦<span>Picked within<br>24 hours</span></div>
+        <div class="hero-stamp">100%<br><small>FARM<br>CONNECTED</small></div>
+      </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+      <div class="section-head">
+        <div><div class="eyebrow">THE DAILY HARVEST</div><h2>What's fresh today?</h2></div>
+        <div class="search-wrap"><span>⌕</span><input id="search" placeholder="Search tomatoes, mangoes..."></div>
+      </div>
+      <div class="category-row" id="categories">
+        <button class="category active" data-category="All">All <small>08</small></button>
+        <button class="category" data-category="Fruits">Fruits 🍊</button>
+        <button class="category" data-category="Vegetables">Vegetables 🥕</button>
+        <button class="category" data-category="Leafy">Leafy greens 🌿</button>
+        <button class="category" data-category="Dairy">Dairy 🥛</button>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="story-art"><div class="field-line one"></div><div class="field-line two"></div><div class="farmer">👩🏽‍🌾</div><div class="story-sun">☀</div></div>
+      <div class="story-copy"><div class="eyebrow">THE KISSAN PROMISE</div><h2>Know where<br><em>your food</em> grows.</h2><p>We connect you directly with small farms, reduce unnecessary middle layers, and keep the harvest moving while it's still fresh.</p><div class="stats"><div><b>24h</b><span>harvest to home</span></div><div><b>48+</b><span>partner growers</span></div><div><b>0</b><span>unnecessary miles</span></div></div></div>
+    </section>
+
+    <section id="why" class="why"><div class="eyebrow">WHY KISSAN KART</div><h2>A better basket,<br><em>by design.</em></h2><div class="why-grid"><article><span>01</span><b>Farm-first</b><p>Growers get a fairer route to customers.</p></article><article><span>02</span><b>Freshness-led</b><p>We prioritize what was harvested most recently.</p></article><article><span>03</span><b>Less waste</b><p>Smarter demand helps good produce stay out of bins.</p></article></div></section>
+  </main>
+
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer-head"><div><div class="eyebrow">YOUR BASKET</div><h3>Fresh picks</h3></div><button id="closeCart" class="close">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="checkout"><div class="total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button id="checkoutBtn" class="primary-btn full">Checkout <span>→</span></button></div>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+
+  <div id="checkoutModal" class="modal"><div class="modal-card"><button class="close" id="closeModal">×</button><div class="eyebrow">ONE LAST STEP</div><h2>Deliver the good stuff.</h2><form id="checkoutForm"><input name="name" placeholder="Your name" required><input name="phone" placeholder="Phone number" required><textarea name="address" placeholder="Delivery address" required></textarea><button class="primary-btn full" type="submit">Place order <span>↗</span></button></form><div id="orderSuccess" class="success hidden"></div></div></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
